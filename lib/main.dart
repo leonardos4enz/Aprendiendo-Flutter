@@ -36,22 +36,20 @@ class _InicioState extends State<Inicio> {
       appBar: AppBar(
         title: const Text("Filas, columnas y botones"),
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.max,
-        children: <Widget>[
-          Container(
-              width: MediaQuery.of(context).size.width * 0.5,
-              height: 50,
-              child: Text(
-                "Hola 01",
-                textAlign: TextAlign.center,
-              )),
-          Text("Hola 02"),
-          Text("Hola 03"),
-        ],
-      ),
+      body: Center(
+          child: ElevatedButton(
+        child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
+          Icon(Icons.access_time),
+          SizedBox(
+            height: 10,
+          ),
+          Text("Ahora")
+        ]),
+        onPressed: () {
+          var t = DateTime.now();
+          print(t);
+        },
+      )),
     );
   }
 }
