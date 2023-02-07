@@ -34,22 +34,22 @@ class _InicioState extends State<Inicio> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Tesla"),
+        title: const Text("Filas, columnas y botones"),
       ),
-      body: ListView(
-        children: [
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.max,
+        children: <Widget>[
           Container(
-              padding: EdgeInsets.all(30.0),
-              child: Image.network(
-                  "https://tesla-cdn.thron.com/delivery/public/image/tesla/f53054f4-30da-4a94-8aac-1aa6f662996d/bvlatuR/std/1200x628/Model-S-Social?quality=auto-medium&format=auto")),
-          Container(
-              padding: EdgeInsets.all(30.0),
-              child: Image.network(
-                  "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/s/RT_V_e49488677d5d48f9aa0e6f8ebb09cdcd.jpg")),
-          Container(
-              padding: EdgeInsets.all(30.0),
-              child: Image.network(
-                  "https://www.autobild.es/sites/autobild.es/public/dc/fotos/Tesla_Cybertruck.jpg")),
+              width: MediaQuery.of(context).size.width * 0.5,
+              height: 50,
+              child: Text(
+                "Hola 01",
+                textAlign: TextAlign.center,
+              )),
+          Text("Hola 02"),
+          Text("Hola 03"),
         ],
       ),
     );
