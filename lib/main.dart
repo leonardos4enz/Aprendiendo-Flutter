@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_1/pages/page02.dart';
 import 'package:flutter_1/pages/page03.dart';
+import 'package:flutter_1/pages/page04.dart';
 //paqiete de importacion
 
 void main() {
@@ -65,7 +66,13 @@ Widget cuerpo(context) {
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => Page03()));
           },
-          child: Text("📢 Ir a Alert Dialog"))
+          child: Text("📢 Ir a Alert Dialog")),
+      ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Page04()));
+          },
+          child: Text("🛰 Ir a APIs"))
     ],
   )));
 }
