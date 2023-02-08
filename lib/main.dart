@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_1/pages/page02.dart';
+import 'package:flutter_1/pages/page03.dart';
 //paqiete de importacion
 
 void main() {
@@ -35,8 +36,9 @@ class _InicioState extends State<Inicio> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.red,
-          title: const Text("Navegación"),
+          backgroundColor: Color.fromARGB(255, 0, 110, 255),
+          title: const Text("Inicio 🏚"),
+          centerTitle: true,
         ),
         body: cuerpo(context));
   }
@@ -52,13 +54,18 @@ Widget cuerpo(context) {
           child: Column(
     mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget>[
-      Text("Hola"),
       ElevatedButton(
           onPressed: () {
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => Page02()));
           },
-          child: Text("Ir a página 2"))
+          child: Text("📜 Ir a términos y condiciones")),
+      ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Page03()));
+          },
+          child: Text("📢 Ir a Alert Dialog"))
     ],
   )));
 }

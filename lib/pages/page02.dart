@@ -11,6 +11,8 @@ class Page02 extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.red,
         title: Text("Terminos y Condiciones"),
+        centerTitle: true,
+        automaticallyImplyLeading: false,
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
