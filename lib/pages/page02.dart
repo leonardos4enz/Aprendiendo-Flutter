@@ -59,3 +59,4 @@ class Page02 extends StatelessWidget {
     );
   }
 }
+//Terminos y condiciones
