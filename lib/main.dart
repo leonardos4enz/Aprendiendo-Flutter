@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_1/pages/page02.dart';
 //paqiete de importacion
 
 void main() {
@@ -33,74 +34,31 @@ class _InicioState extends State<Inicio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        //appBar: AppBar(
-        //  title: const Text("Filas, columnas y botones"),
-        //  ),
-        body: cuerpo());
+        appBar: AppBar(
+          backgroundColor: Colors.red,
+          title: const Text("Navegación"),
+        ),
+        body: cuerpo(context));
   }
 }
 
-Widget cuerpo() {
+Widget cuerpo(context) {
   return Container(
-      decoration: BoxDecoration(
-          image: DecorationImage(
-              image: NetworkImage("https://fondosmil.com/fondo/23222.jpg"),
-              fit: BoxFit.cover)),
+      //decoration: BoxDecoration(
+      //    image: DecorationImage(
+      //        image: NetworkImage("https://fondosmil.com/fondo/23222.jpg"),
+      //        fit: BoxFit.cover)),
       child: Center(
           child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          nombre(),
-          campoUsuario(),
-          campoContrasena(),
-          SizedBox(
-            height: 15,
-          ),
-          botonEntrar(),
-        ],
-      )));
-}
-
-Widget nombre() {
-  return Text("Sign in",
-      style: TextStyle(
-          color: Color.fromARGB(255, 255, 255, 255),
-          fontSize: 35.0,
-          fontWeight: FontWeight.bold));
-}
-
-Widget campoUsuario() {
-  return Container(
-    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-    child: TextField(
-        decoration: InputDecoration(
-      hintText: "User",
-      fillColor: Colors.white,
-      filled: true,
-    )),
-  );
-}
-
-Widget campoContrasena() {
-  return Container(
-    padding: EdgeInsets.symmetric(horizontal: 20),
-    child: TextField(
-        obscureText: true,
-        decoration: InputDecoration(
-          hintText: "Password",
-          fillColor: Colors.white,
-          filled: true,
-        )),
-  );
-}
-
-Widget botonEntrar() {
-  return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-          backgroundColor: Color.fromARGB(255, 126, 139, 255)),
-      onPressed: () {},
-      child: Text(
-        "Enter",
-        style: TextStyle(fontSize: 25, color: Colors.white),
-      ));
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
+      Text("Hola"),
+      ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Page02()));
+          },
+          child: Text("Ir a página 2"))
+    ],
+  )));
 }
