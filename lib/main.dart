@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_1/pages/page02.dart';
 import 'package:flutter_1/pages/page03.dart';
 import 'package:flutter_1/pages/page04.dart';
+import 'package:flutter_1/pages/page05.dart';
 //paqiete de importacion
 
 void main() {
@@ -72,7 +73,13 @@ Widget cuerpo(context) {
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => Page04()));
           },
-          child: Text("🛰 Ir a APIs"))
+          child: Text("🚧 Ir a APIs >> Clases")),
+      ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Page05()));
+          },
+          child: Text("🚧 Ir a APIs >> Listas")),
     ],
   )));
 }
