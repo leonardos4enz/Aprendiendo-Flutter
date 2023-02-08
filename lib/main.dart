@@ -96,6 +96,8 @@ Widget campoContrasena() {
 
 Widget botonEntrar() {
   return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+          backgroundColor: Color.fromARGB(255, 126, 139, 255)),
       onPressed: () {},
       child: Text(
         "Enter",
