@@ -19,8 +19,8 @@ class _Page05State extends State<Page05> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 111, 54, 244),
-          title: Text("APIs"),
+          backgroundColor: Color.fromARGB(255, 35, 179, 95),
+          title: Text("API » Lista Contactos"),
           centerTitle: true,
           //automaticallyImplyLeading: false,
         ),
@@ -60,8 +60,9 @@ class _Page05State extends State<Page05> {
                           print(persona.name),
                           setState(() {
                             _people.remove(persona);
+                            Navigator.pop(context);
                           }),
-                          Navigator.pop(context)
+                          //Navigator.pop(context)
                         },
                     child: Text("Borrar",
                         style:

@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_1/pages/page02.dart';
-import 'package:flutter_1/pages/page03.dart';
-import 'package:flutter_1/pages/page04.dart';
-import 'package:flutter_1/pages/page05.dart';
-import 'package:flutter_1/pages/page06.dart';
+import 'package:flutter_1/BNavigation/bottom_nav.dart';
+import 'package:flutter_1/BNavigation/routes.dart';
 //paqiete de importacion
 
 void main() {
@@ -17,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Inicio',
       theme: ThemeData(
         //color del tema
@@ -35,58 +33,32 @@ class Inicio extends StatefulWidget {
 }
 
 class _InicioState extends State<Inicio> {
+  int index = 0;
+  BNavigation? myBNB;
+
+  @override
+  void initState() {
+    myBNB = BNavigation(currenIndex: (i) {
+      setState(() {
+        index = i;
+      });
+    });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 0, 110, 255),
-          title: const Text("Inicio 🏚"),
-          centerTitle: true,
-        ),
-        body: cuerpo(context));
+      //appBar: AppBar(
+      //  backgroundColor: Color.fromARGB(255, 0, 110, 255),
+      //  title: const Text("Inicio 🏚"),
+      //  centerTitle: true,
+      //),
+      // body: cuerpo(context),
+      body: Routes(index: index),
+      bottomNavigationBar: myBNB,
+    );
   }
 }
 
-Widget cuerpo(context) {
-  return Container(
-      //decoration: BoxDecoration(
-      //    image: DecorationImage(
-      //        image: NetworkImage("https://fondosmil.com/fondo/23222.jpg"),
-      //        fit: BoxFit.cover)),
-      child: Center(
-          child: Column(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: <Widget>[
-      ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Page02()));
-          },
-          child: Text("📜 Ir a términos y condiciones")),
-      ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Page03()));
-          },
-          child: Text("📢 Ir a Alert Dialog")),
-      ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Page04()));
-          },
-          child: Text("🚧 Ir a APIs >> Clases")),
-      ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Page05()));
-          },
-          child: Text("🚧 Ir a APIs >> Listas")),
-      ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Page06()));
-          },
-          child: Text("🚧 Ir a APIs >> Future/http")),
-    ],
-  )));
-}//a
+//a

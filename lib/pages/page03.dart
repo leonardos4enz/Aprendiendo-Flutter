@@ -12,7 +12,7 @@ class _Page03State extends State<Page03> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 244, 54, 187),
+          backgroundColor: Color.fromARGB(255, 255, 0, 0),
           title: Text("Alert Dialog"),
           centerTitle: true,
           //automaticallyImplyLeading: false,
@@ -32,7 +32,7 @@ class _Page03State extends State<Page03> {
                 height: 100,
               ),
               Text(
-                _suscrito ? "Subscrito" : "No suscripto",
+                _suscrito ? "Estás subscrito" : "No estás subscrito",
                 style: TextStyle(fontSize: 20),
               )
             ],

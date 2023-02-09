@@ -12,8 +12,8 @@ class _Page04State extends State<Page04> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 111, 54, 244),
-          title: Text("APIs"),
+          backgroundColor: Color.fromARGB(255, 35, 179, 95),
+          title: Text("API » Clases"),
           centerTitle: true,
           //automaticallyImplyLeading: false,
         ),

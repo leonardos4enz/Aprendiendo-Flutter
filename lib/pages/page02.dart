@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_1/main.dart';
+import 'package:flutter_1/pages/page01.dart';
 
 class Page02 extends StatelessWidget {
   const Page02({super.key});
@@ -42,7 +43,8 @@ class Page02 extends StatelessWidget {
               onPressed: () {
                 //Navigator.push(
                 //    context, MaterialPageRoute(builder: (context) => MyApp()));
-                Navigator.pop(context);
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => MyApp()));
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,

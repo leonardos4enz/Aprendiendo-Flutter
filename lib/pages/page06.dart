@@ -43,7 +43,7 @@ class _Page06State extends State<Page06> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 111, 54, 244),
+          backgroundColor: Color.fromARGB(255, 83, 178, 255),
           title: Text("APIs"),
           centerTitle: true,
         ),
