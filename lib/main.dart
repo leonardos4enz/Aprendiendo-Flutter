@@ -3,6 +3,7 @@ import 'package:flutter_1/pages/page02.dart';
 import 'package:flutter_1/pages/page03.dart';
 import 'package:flutter_1/pages/page04.dart';
 import 'package:flutter_1/pages/page05.dart';
+import 'package:flutter_1/pages/page06.dart';
 //paqiete de importacion
 
 void main() {
@@ -80,6 +81,12 @@ Widget cuerpo(context) {
                 context, MaterialPageRoute(builder: (context) => Page05()));
           },
           child: Text("🚧 Ir a APIs >> Listas")),
+      ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Page06()));
+          },
+          child: Text("🚧 Ir a APIs >> Future/http")),
     ],
   )));
-}
+}//a
