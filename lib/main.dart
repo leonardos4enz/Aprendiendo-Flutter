@@ -3,7 +3,7 @@ import 'package:flutter_1/BNavigation/bottom_nav.dart';
 import 'package:flutter_1/BNavigation/routes.dart';
 //paqiete de importacion
 
-void main() {
+void main() async {
   runApp(const MyApp());
 }
 

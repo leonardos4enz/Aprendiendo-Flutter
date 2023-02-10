@@ -31,8 +31,7 @@ class _BNavigationState extends State<BNavigation> {
           BottomNavigationBarItem(icon: Icon(Icons.feed), label: "Legal"),
           BottomNavigationBarItem(
               icon: Icon(Icons.announcement), label: "Alert"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.donut_small), label: "Clases"),
+          BottomNavigationBarItem(icon: Icon(Icons.egg), label: "Huevo"),
           BottomNavigationBarItem(icon: Icon(Icons.list), label: "Lista"),
           BottomNavigationBarItem(
               icon: Icon(Icons.sentiment_very_satisfied), label: "Giphy"),
