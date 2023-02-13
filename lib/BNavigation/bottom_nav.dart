@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BNavigation extends StatefulWidget {
   final Function currenIndex;
@@ -37,6 +38,8 @@ class _BNavigationState extends State<BNavigation> {
               icon: Icon(Icons.sentiment_very_satisfied), label: "Giphy"),
           BottomNavigationBarItem(
               icon: Icon(Icons.space_dashboard), label: "Nav"),
+          BottomNavigationBarItem(
+              icon: Icon(FontAwesomeIcons.magnet), label: "Param"),
         ]);
   }
 }

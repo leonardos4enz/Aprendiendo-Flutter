@@ -7,6 +7,7 @@ import 'package:flutter_1/pages/page04.dart';
 import 'package:flutter_1/pages/page05.dart';
 import 'package:flutter_1/pages/page06.dart';
 import 'package:flutter_1/pages/page07.dart';
+import 'package:flutter_1/pages/page08.dart';
 
 class Routes extends StatelessWidget {
   final int index;
@@ -21,7 +22,8 @@ class Routes extends StatelessWidget {
       Page04(),
       Page05(),
       Page06(),
-      Page07()
+      Page07(),
+      Page08()
     ];
     return myList[index];
   }
